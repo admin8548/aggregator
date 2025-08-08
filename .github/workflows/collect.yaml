@@ -2,8 +2,12 @@ name: Collect
 on:
   # executed once a week on Sundays at 00:00
   schedule:
-    - cron: "20 0 * * *"    # 对应北京/上海时间 8:20 AM
-    - cron: "0 7 * * *"  # 对应北京/上海时间 3:00 PM (15:00)
+    # 对应北京/上海时间 8:20 AM
+    - cron: "20 0 * * *"
+    # 对应北京/上海时间 12:20 PM
+    - cron: "20 4 * * *"
+    # 对应北京/上海时间 4:20 PM (16:20)
+    - cron: "20 8 * * *"
     # - cron: "0 0 * * 1"  #每周一的凌晨 00:00 自动运行一次
   workflow_dispatch:
 
